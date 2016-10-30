@@ -4,10 +4,94 @@ Afim de consolidar o planejamento do projeto de MPS deste trabalho foi estabelec
 Apêndice \ref{plano_de_projeto}. Neste plano consta o planejamento de recursos humanos e o planejamento do tempo materializado
 pelo cronograma. Para este projeto não foram considerados os custos envolvidos. 
 
+
+\section{Embasamento da abordagem}
+
+Para guiar a definição das ações de melhoria, alinhado com os objetivos de melhoria,
+foram considerados os processos de Garantia de Qualidade de Software, de Gestão de Configuração,
+de Gestão de Medição e Teste de Qualificação de Software da norma ISO/IEC 12207/2008 \cite{12207}, porque o propósito de ambos está 
+de acordo com os objetivos de melhoria do projeto, podendo contribuir com atividades para o processo de melhoria.
+
+De acordo com a norma ISO/IEC 12207/2008 \cite{12207}, os processos podem ser resumidos em seus respectivos propósitos e resultados:\\
+
+\noindent
+\textbf{Processo de Garantia de Qualidade de Software}
+\begin{itemize}
+    \item \textbf{Propósito}: \emph{Assegurar que os produtos de trabalho e processos estejam de acordo com os planos e provisões predefinidos.}
+    \item \textbf{Resultados}:
+        \subitem - Uma estratégia para conduzir a garantia de qualidade é desenvolvida;
+	\subitem - Evidência da qualidade do software é produzida e mantida;
+	\subitem - Problemas e não-conformidades com os requisitos são identificados e documentados;
+	\subitem - A aderência dos produtos, processos e atividades aos padrões aplicáveis, procedimentos e requisitos é verificada.
+\end{itemize}
+
+
+\noindent
+\textbf{Processo de Gestão de Configuração}
+\begin{itemize}
+    \item \textbf{Propósito}: \emph{Estabelecer e manter a integridade de todos os produtos identificados do projeto ou processo
+	   e disponibilizá-los às partes interessadas.}
+    \item \textbf{Resultados}:
+        \subitem - Uma estratégia de gestão de configuração é definida;
+	\subitem - Itens de configuração são definidos;
+	\subitem - Baselines são estabelecidas;
+	\subitem - Mudanças nos itens de configuração são gerenciadas e controladas;
+	\subitem - A configuração de itens entregues é controlada;
+	\subitem - O estado dos itens de configuração é disponibilizado ao longo do ciclo de vida.
+\end{itemize}
+
+
+\noindent
+\textbf{Processo de Gestão de Medição}
+\begin{itemize}
+    \item \textbf{Propósito}: \emph{Coletar, analisar e comunicar dados relacionados aos produtos desenvolvidos e 
+	  os processos implementados na organização, para dar suporte ao gerenciamento efetivo e demonstrar a qualidade dos produtos.}
+    \item \textbf{Resultados}:
+        \subitem - As necessidades de informação são identificadas;
+	\subitem - Um conjunto apropriado de métricas, dirigido pelas necessidades de informação são identificados e/ou desenvolvidos;
+	\subitem - Atividades de medição são identificas e planejadas;
+	\subitem - Os dados necessários são coletados, armazenados, analisados e os resultados interpretados;
+	\subitem - Produtos de informação são utilizados para suportar decisões e prover uma base objetiva para a comunicação;
+	\subitem - O Processo de Medição e as métricas são avaliados;
+	\subitem - Melhorias são comunicadas ao responsável pelo Processo de Medição.
+\end{itemize}
+
+\noindent
+\textbf{Processo de Teste de Qualificação de Software}
+\begin{itemize}
+    \item \textbf{Propósito}: \emph{Confirmar que o produto integrado de software está de acordo com os requisitos definidos.}
+    \item \textbf{Resultados}:
+        \subitem - Critérios de aceitação para o produto de software são desenvolvidos para demonstrar a conformidade com os requisitos;
+        \subitem - O software integrado é verificado utilizando os critérios definidos;
+        \subitem - Os resultados dos testes são armazenados;
+        \subitem - Uma estratégia de regressão é desenvolvida para retestar o software quando há mudanças.
+\end{itemize}
+
+
+A partir dos propósitos, resultados e atividades de cada processo da norma ISO/IEC 12207/2008, foram levantadas as ações de melhoria
+para alcançar os objetivos de melhoria propostos, que estão descritas na próxima seção.
+
+Além dos processos da norma ISO/IEC 12207/2008, alguns princípios e práticas ágeis do \textit{eXtreme Programming} (XP) \cite{xp} 
+foram levados em conta para embasar a definição das ações de melhoria. São eles:
+
+\begin{itemize}
+ \item Rápido \textit{Feedback};
+ \item Manter a simplicidade;
+ \item Mudanças incrementais;
+ \item Trabalho de qualidade;
+ \item Testes;
+ \item Refatoração;
+ \item Integração contínua;
+ \item Releases curtas.
+\end{itemize}
+
+\vfill
+\pagebreak
 \section{Ações de melhoria}
 
 Com os objetivos de melhoria definidos na fase de Iniciação foram estabelecidas ações para alcançá-los. Estas ações estão 
-descritas na Tabela \ref{tab:acoes}.
+descritas na Tabela \ref{tab:acoes}. Os objetivos de melhoria foram priorizados de acordo com as necessidades da organização
+alinhadas com a experiência da equipe de desenvolvimento no contexto.
 
 \begin{table}[!h]
 \centering
@@ -28,5 +112,50 @@ descritas na Tabela \ref{tab:acoes}.
 \end{tabular}
 \end{table}
 
-%\section{Embasamento}
-% ADICIONAR AQUI OS PROCESSOS DA 12207 E AS PRÁTICAS AGEIS
+Para o objetivo de melhoria "\emph{Formalizar o processo de desenvolvimento de software}", no processo a ser modelado as
+seguintes atividades devem ser incluídas, baseando-se nas atividades dos processos de Garantia de Qualidade de Software,
+de Gestão de Configuração e de Teste de Qualificação de Software da norma ISO/IEC 12207/2008 \cite{12207}:
+ 
+\begin{itemize}
+  \item Definir um subprocesso de garantia de qualidade;
+    \subitem - Definir atividades para Garantia do Produto;
+    \subitem - Definir atividades para Garantia do Processo;
+    \subitem - Adicionar atividades de Verificação e Validação para a garantia da qualidade.
+  \item Definir e padronizar a estratégia de gerência de configuração;
+    \subitem - Definir estratégia para o controle de mudanças;
+  \item Estabelecer e manter suíte de testes;
+    \subitem - Desenvolver critérios de aceitação para o software integrado, de acordo com os requisitos;
+    \subitem - Montar suíte de testes;
+    \subitem - Definir estratégia para testes de regressão;
+    \subitem - Atualizar suíte de testes e documentação associada.
+    \subitem - Documentar resultados dos testes;
+\end{itemize}
+
+O objetivo de melhoria "\emph{Otimizar a atividade de implantação}" consiste em facilitar a atividade de implantação,
+para que o impacto da burocracia no acesso ao ambiente de produção seja mínimo no desenvolvimento do sistema.
+Para atingir este objetivo, é proposta a adição da técnica de integração contínua ao processo para automatizar a
+implantação e atualização do código. Esta proposta está alinhada com os princípios e práticas ágeis Rápido \textit{feedback},
+Testes e Integração Contínua, propostos por \citeonline{xp} na metodologia XP.
+
+O objetivo de melhoria "\emph{Estabelecer métricas para o processo}" seria basicamente um subprocesso 
+do processo que será obtido com o objetivo "\emph{Formalizar o processo de desenvolvimento de software}", 
+mas a sua importância para o contexto é tamanha que este foi destacado como um objetivo de melhoria por si só,
+pois para que a melhoria possa ser visualizada é preciso métricas para acompanhar a evolução do processo.
+Para este objetivo de melhoria, as seguintes atividades devem ser incluídas ao processo de medição,
+baseado no processo de Gestão de Medição da norma ISO/IEC 12207/2008 \cite{12207}:
+
+\begin{itemize}
+ \item Identificar e priorizar as necessidades de informação;
+ \item Selecionar e documentar as métricas a serem coletadas, que satisfaçam as necessidades de informação;
+ \item Definir procedimentos de medição;
+ \item Executar o processo de medição, seguindo os procedimentos;
+    \subitem - Coletar, armazenar e verificar dados;
+    \subitem - Analisar os dados e desenvolver produtos de informação;
+    \subitem - Comunicar resultados;
+ \item Avaliar produtos de informação, identificar e comunicar possíveis melhorias;
+\end{itemize}
+
+Para a definição das métricas o método GQM (Basili et al, 1994 apud \cite{solingen99}) se mostra adequado, 
+pois apresenta um processo de medição bem estruturado, detalhado, dividido em diferentes níveis de abstração
+e orientado a objetivos, também estando em conforme com as especificações do processo de Gestão de Medição
+da norma ISO/IEC 12207/2008.
