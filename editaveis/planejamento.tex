@@ -215,24 +215,55 @@ pois apresenta um processo de medição bem estruturado, detalhado, dividido em 
 e orientado a objetivos, também estando em conforme com as especificações do processo de Gestão de Medição
 da norma ISO/IEC 12207/2008.
 
-\section{Planejamento da avaliação}
+\section{Avaliação da melhoria}
+
+A avaliação da melhoria seguirá o processo ilustrado na Figura \ref{fig:processo_avaliacao}.
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[scale=0.4]{figuras/processo_avaliacao.png}
+\caption{Processo de avaliação das melhorias}
+\label{fig:processo_avaliacao}
+\end{figure}
+
+O Planejamento da Avaliação consiste em atividades introdutórias à avaliação como definição do período de avaliação,
+definição de métricas, ferramentas e formas de coleta e a definição da base de comparação. A base de comparação consiste
+em valores de referência das métricas definidas para averiguar se houve melhorias ou não ao longo da execução do processo de melhoria.
+
+A Execução e Análise e Relato dos Resultados da Avaliação consiste em atividades para coleta e interpretação das métricas,
+que são realizadas em ciclos durante o período de avaliação definido anteriormente. Por fim, ao final dos ciclos de execução 
+e análise o novo processo e os produtos de trabalho gerados são confrontados frente aos modelos ISO/IEC 12207/2008 e CMMI, e às práticas ágeis 
+para verificar sua aderência aos mesmos.
+
+\subsection{Planejamento da avaliação}
     
     Para avaliar o resultado do processo de melhoria será executada uma avaliação de confronto com os elementos selecionados
     da 12207, do CMMI-DEV e das práticas ágeis. A fim de comparar o processo melhorado com o processo atual a mesma avaliação 
     de confronto foi realizada no processo atual e pode ser vista no Apêndice \ref{ap:avaliacao}. As mesmas tabelas serão 
     utilizadas para avaliação do processo melhorado.
     
-    Além disso, serão coletadas as seguintes métricas:
+    Além disso, serão coletadas as seguintes métricas para avaliar o resultado do processo de melhoria:
     
     \begin{itemize}
-      \item Número de desvios ao processo;
-      \item Número de defeitos por atualização de código;
-      \item Número de defeitos decorrentes da implantação;
-      \item Cobertura de código;
+      \item \textbf{Número de desvios ao processo};
+	\subitem Esta métrica permitirá acompanhar a aderência da equipe ao novo processo, informando a quantidade
+		 de vezes em que atividades do processo definido não foram seguidas. Esta métrica será levantada durante
+		 a Revisão da \textit{Sprint}, realizando uma verificação da atuação na \textit{Sprint}.
+      \item \textbf{Número de defeitos por atualização de código};
+	\subitem Esta métrica visa contabilizar a quantidade de defeitos percebidos pela equipe decorrentes de novos
+		 incrementos de \textit{software} em ambiente de homologação. Esta métrica será coletada pela equipe 
+		 durante a Revisão da \textit{Sprint}.
+      \item \textbf{Número de defeitos decorrentes da implantação};
+	\subitem Esta métrica visa contabilizar a quantidade de defeitos percebidos tanto pela equipe quanto por usuários 
+		 decorrentes de atualizações de código no ambiente de produção.
+      \item \textbf{Cobertura de código}.
+	\subitem Esta métrica permitirá acompanhar a evolução dos testes no processo de desenvolvimento e será coletada por meio da
+		 ferramenta PHPUnit \footnotemark. \footnotetext{https://phpunit.de/}
     \end{itemize}
     
     A avaliação das melhorias será comparada com valores base das métricas acima. Para determinar os valores base para comparação, 
     as métricas definidas acima serão coletadas em um período de duas \textit{sprints} e será realizada uma média dos valores.
     
     Como o desenvolvimento do SiGA segue o \textit{framework Scrum}, as ações implementadas serão avaliadas semanalmente,
-    no fim de cada \textit{Sprint}, a partir da coleta das métricas definidas acima e comparação com os valores base.
+    no fim de cada \textit{Sprint} durante 8 \textit{Sprints} (2 meses), a partir da coleta das métricas definidas acima e
+    comparação com os valores base.
