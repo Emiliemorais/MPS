@@ -3,4 +3,88 @@
 
  \input{editaveis/plano_de_projeto}
  \input{editaveis/processo_atual}
+ 
+\chapter{Avaliação do Processo atual} \label{ap:avaliacao}
+
+A avaliação foi realizada com base nas práticas, resultados e processos escolhidos do XP, Scrum, 12207 e CMMI. 
+Para cada um desses elementos foi avaliada se é implementado (I), parcialmente implementado (PI) ou não implementado (NI) no processo
+atual. 
+
+\begin{table}[H]
+\centering
+\caption{Avaliação do processo de acordo com os processos escolhidos do CMMI}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|l|l|l|l|l|}
+\hline
+\multicolumn{1}{|c|}{\textbf{Área de Processo}} & \multicolumn{1}{c|}{\textbf{Meta Específica}}                                                                     & \multicolumn{1}{c|}{\textbf{Prática específica}}                                                                                & \multicolumn{1}{c|}{\textbf{Status}} & \multicolumn{1}{c|}{\textbf{Descrição da evidência}}                                                                                                                         \\ \hline
+\multirow{7}{*}{Gestão de Configuração (CM)}    & \multirow{3}{*}{SG 1 Estabelecer Baselines}                                                                       & SP 1.1 Identificar Itens de Configuração                                                                                        & NI                                   & -                                                                                                                                                                            \\ \cline{3-5} 
+                                                &                                                                                                                   & \begin{tabular}[c]{@{}l@{}}SP 1.2 Estabelecer um Sistema de \\ Gestão de Configuração\end{tabular}                              & I                                    & \begin{tabular}[c]{@{}l@{}}É usado o Github como sistema de \\ gestão configuração\end{tabular}                                                                              \\ \cline{3-5} 
+                                                &                                                                                                                   & SP 1.3 Criar ou Liberar Baselines                                                                                               & PI                                   & São criadas tags no Github para Release                                                                                                                                      \\ \cline{2-5} 
+                                                & \multirow{2}{*}{\begin{tabular}[c]{@{}l@{}}SG 2 Acompanhar e Controlar \\ Mudanças\end{tabular}}                  & \begin{tabular}[c]{@{}l@{}}SP 2.1 Acompanhar Solicitações \\ de Mudança\end{tabular}                                            & I                                    & Issues do Github                                                                                                                                                             \\ \cline{3-5} 
+                                                &                                                                                                                   & SP 2.2 Controlar Itens de Configuração                                                                                          & I                                    & Github                                                                                                                                                                       \\ \cline{2-5} 
+                                                & \multirow{2}{*}{SG 3 Estabelecer Integridade}                                                                     & \begin{tabular}[c]{@{}l@{}}SP 3.1 Estabelecer Registros de \\ Gestão de Configuração\end{tabular}                               & PI                                   & Apenas os elementos providos pelo Github                                                                                                                                     \\ \cline{3-5} 
+                                                &                                                                                                                   & \begin{tabular}[c]{@{}l@{}}SP 3.2 Executar Auditorias de \\ Configuração\end{tabular}                                           & NI                                   & -                                                                                                                                                                            \\ \hline
+\multirow{9}{*}{Integração de Produto (PI)}     & \multirow{3}{*}{\begin{tabular}[c]{@{}l@{}}SG 1 Preparar-se para Integração \\ de Produto\end{tabular}}           & \begin{tabular}[c]{@{}l@{}}SP 1.1 Determinar Sequência \\ de Integração\end{tabular}                                            & I                                    & \begin{tabular}[c]{@{}l@{}}A integração é sempre do incremento de \\ software mais novo com o antigo\end{tabular}                                                            \\ \cline{3-5} 
+                                                &                                                                                                                   & \begin{tabular}[c]{@{}l@{}}SP 1.2 Estabelecer Ambiente de \\ Integração do Produto\end{tabular}                                 & PI                                   & \begin{tabular}[c]{@{}l@{}}Há um ambiente de integração utilizado \\ para o gerente, mas é inadequado\end{tabular}                                                           \\ \cline{3-5} 
+                                                &                                                                                                                   & \begin{tabular}[c]{@{}l@{}}SP 1.3 Estabelecer Procedimentos e \\ Critérios para Integração do Produto\end{tabular}              & NI                                   & -                                                                                                                                                                            \\ \cline{2-5} 
+                                                & \multirow{2}{*}{\begin{tabular}[c]{@{}l@{}}SG 2 Assegurar Compatibilidade \\ das Interfaces\end{tabular}}         & \begin{tabular}[c]{@{}l@{}}SP 2.1 Revisar Descrições de Interfaces \\ para Assegurar Completude\end{tabular}                    & PI                                   & \begin{tabular}[c]{@{}l@{}}As interfaces necessárias são descritas nas issues, \\ mas não há um procedimento explícito de revisão\end{tabular}                               \\ \cline{3-5} 
+                                                &                                                                                                                   & SP 2.2 Gerenciar Interfaces                                                                                                     & PI                                   & Há uma gerência mínima através do Composer                                                                                                                                   \\ \cline{2-5} 
+                                                & \multirow{4}{*}{\begin{tabular}[c]{@{}l@{}}SG 3 Montar Componentes do \\ Produto e Entregar Produto\end{tabular}} & \begin{tabular}[c]{@{}l@{}}SP 3.1 Confirmar se os Componentes \\ do Produto estão Prontos para \\ serem Integrados\end{tabular} & PI                                   & \begin{tabular}[c]{@{}l@{}}A confirmação é realizada através da \\ disponibilização do código na master, \\ ou seja, está sob subjetividade dos desenvolvedores\end{tabular} \\ \cline{3-5} 
+                                                &                                                                                                                   & SP 3.2 Montar Componentes do Produto                                                                                            & I                                    & \begin{tabular}[c]{@{}l@{}}O incremento é adicionado ao sistema\\  em ambiente de produção\end{tabular}                                                                      \\ \cline{3-5} 
+                                                &                                                                                                                   & \begin{tabular}[c]{@{}l@{}}SP 3.3 Avaliar Componentes de \\ Produto Montados\end{tabular}                                       & PI                                   & \begin{tabular}[c]{@{}l@{}}A avaliação não é formal, por isso são \\ encontrados vários problemas\end{tabular}                                                               \\ \cline{3-5} 
+                                                &                                                                                                                   & \begin{tabular}[c]{@{}l@{}}SP 3.4 Empacotar e Entregar Produto \\ ou Componente de Produto\end{tabular}                         & NI                                   & -                                                                                                                                                                            \\ \hline
+\end{tabular}%
+}
+\end{table}
+\begin{table}[]
+\centering
+\caption{Avaliação do processo de acordo com os processos escolhidos da 12207}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|l|l|l|l|}
+\hline
+\multicolumn{1}{|c|}{\textbf{Processo}} & \multicolumn{1}{c|}{\textbf{Resultados}} & \multicolumn{1}{c|}{\textbf{Status}} & \multicolumn{1}{c|}{\textbf{Descrição da evidência}} \\ \hline
+\multirow{4}{*}{\begin{tabular}[c]{@{}l@{}}Garantia de Qualidade \\ de Software\end{tabular}} & \begin{tabular}[c]{@{}l@{}}Uma estratégia para conduzir a garantia \\ de qualidade é desenvolvida\end{tabular} & NI & - \\ \cline{2-4} 
+ & \begin{tabular}[c]{@{}l@{}}Evidência da qualidade do software \\ é produzida e mantida\end{tabular} & NI & - \\ \cline{2-4} 
+ & \begin{tabular}[c]{@{}l@{}}Problemas e não-conformidades com os \\ requisitos são identificados e documentados\end{tabular} & PI & \begin{tabular}[c]{@{}l@{}}Os problemas e não-conformidades \\ são identificados, mas raramente documentados\end{tabular} \\ \cline{2-4} 
+ & \begin{tabular}[c]{@{}l@{}}A aderência dos produtos, processos e \\ atividades aos padrões aplicáveis, \\ procedimentos e requisitos é verificada\end{tabular} & NI & - \\ \hline
+\multirow{6}{*}{Gestão de Configuração} & \begin{tabular}[c]{@{}l@{}}Uma estratégia de gestão de configuração \\ é definida\end{tabular} & NI & - \\ \cline{2-4} 
+ & Itens de configuração são definidos & NI & - \\ \cline{2-4} 
+ & Baselines são estabelecidas & NI & - \\ \cline{2-4} 
+ & \begin{tabular}[c]{@{}l@{}}Mudanças nos itens de configuração \\ são gerenciadas e controladas\end{tabular} & NI & - \\ \cline{2-4} 
+ & \begin{tabular}[c]{@{}l@{}}A configuração de itens entregues \\ é controlada\end{tabular} & NI & - \\ \cline{2-4} 
+ & \begin{tabular}[c]{@{}l@{}}O estado dos itens de configuração é \\ disponibilizado ao longo do ciclo de vida.\end{tabular} & NI & - \\ \hline
+\multirow{7}{*}{Gestão de Medição} & As necessidades de informação são identificadas & NI & - \\ \cline{2-4} 
+ & \begin{tabular}[c]{@{}l@{}}Um conjunto apropriado de métricas, \\ dirigido pelas  necessidades de informação \\ são identificados  e/ou desenvolvidos\end{tabular} & NI & - \\ \cline{2-4} 
+ & \begin{tabular}[c]{@{}l@{}}Atividades de medição são identificas \\ e planejadas\end{tabular} & NI & - \\ \cline{2-4} 
+ & \begin{tabular}[c]{@{}l@{}}Os dados necessários são coletados, \\ armazenados, analisados e os\\ resultados interpretados\end{tabular} & NI & - \\ \cline{2-4} 
+ & \begin{tabular}[c]{@{}l@{}}Produtos de informação são utilizados \\ para suportar decisões e prover uma \\ base objetiva para a comunicação\end{tabular} & NI & - \\ \cline{2-4} 
+ & \begin{tabular}[c]{@{}l@{}}O Processo de Medição e as métricas \\ são avaliados\end{tabular} & NI & - \\ \cline{2-4} 
+ & \begin{tabular}[c]{@{}l@{}}Melhorias são comunicadas ao \\ responsável pelo Processo de Medição.\end{tabular} & NI & - \\ \hline
+\multirow{4}{*}{\begin{tabular}[c]{@{}l@{}}Teste de Qualificação \\ de Software\end{tabular}} & \begin{tabular}[c]{@{}l@{}}Critérios de aceitação para o produto de \\ software são desenvolvidos para \\ demonstrar a conformidade com os requisitos\end{tabular} & I & \begin{tabular}[c]{@{}l@{}}Os critérios de aceitação são \\ escritos nas issues do Github\end{tabular} \\ \cline{2-4} 
+ & \begin{tabular}[c]{@{}l@{}}O software integrado é verificado \\ utilizando os  critérios definidos\end{tabular} & NI & - \\ \cline{2-4} 
+ & Os resultados dos testes são armazenados & NI & - \\ \cline{2-4} 
+ & \begin{tabular}[c]{@{}l@{}}Uma estratégia de regressão é \\ desenvolvida para retestar o software\\  quando há mudanças.\end{tabular} & PI & \begin{tabular}[c]{@{}l@{}}Não há uma boa estratégia de regressão definida, \\ todavia com mudanças grandes há testes\\  funcionais não automatizados\end{tabular} \\ \hline
+\end{tabular}%
+}
+\end{table}
+
+\begin{table}[]
+\caption{Avaliação do processo de acordo com as práticas ágeis escolhidas}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|l|l|l|}
+\hline
+\multicolumn{1}{|c|}{\textbf{Prática}} & \multicolumn{1}{c|}{\textbf{Status}} & \multicolumn{1}{c|}{\textbf{Descrição da evidência}} \\ \hline
+Rápido Feedback & I & A comunicação entre o time e o cliente é constante \\ \hline
+Manter a simplicidade & I & Há esforço da equipe para manter a simplicidade \\ \hline
+Mudanças incrementais & I & São gerados incrementos a cada semana \\ \hline
+Trabalho de qualidade & PI & \begin{tabular}[c]{@{}l@{}}Há esforço da equipe para manter a qualidade, todavia não há uma boa \\ suíte de testes, e há problemas na integração\end{tabular} \\ \hline
+Testes & PI & Há uma suíte de testes, porém com poucos testes \\ \hline
+Refatoração & PI & Não é uma prática constante, mas refatorações são realizadas \\ \hline
+Integração contínua & NI & - \\ \hline
+Releases curtas & I & \begin{tabular}[c]{@{}l@{}}Não há uma divisão exata em Releases, todavia há entrega \\ contínua de incrementos de software\end{tabular} \\ \hline
+\end{tabular}%
+}
+\end{table}
+
+
 \end{apendices}

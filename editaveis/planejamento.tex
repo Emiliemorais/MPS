@@ -68,8 +68,9 @@ De acordo com a norma ISO/IEC 12207/2008 \cite{12207}, os processos podem ser re
 \end{itemize}
 
 
-A partir dos propósitos, resultados e atividades de cada processo da norma ISO/IEC 12207/2008, foram levantadas as ações de melhoria
-para alcançar os objetivos de melhoria propostos, que estão descritas na próxima seção.
+A partir dos propósitos, resultados e atividades de cada processo da norma ISO/IEC 12207/2008 e no CMMI-DEV, foram levantadas as
+ações de melhoria para alcançar os objetivos de melhoria propostos, que estão descritas na próxima seção. Vale ressaltar, que apenas os propósitos e
+práticas considerados relevantes doram utilizados.
 
 Além dos processos da norma ISO/IEC 12207/2008, alguns princípios e práticas ágeis do \textit{eXtreme Programming} (XP) \cite{xp} 
 foram levados em conta para embasar a definição das ações de melhoria. São eles:
@@ -84,6 +85,55 @@ foram levados em conta para embasar a definição das ações de melhoria. São 
  \item Integração contínua;
  \item Releases curtas.
 \end{itemize}
+
+O modelo de maturidade CMMI-DEV também foi utilizado como embasamento das ações de melhoria e foram escolhidos duas áreas de
+processos relacionadas com os objetivos de melhoria: Gestão de Configuração (CM) e Integração de Produto (PI).
+Os objetivos dessas áreas de processo podem ser sumarizadas nos seguintes itens:
+
+
+\noindent
+\textbf{Gestão de Configuração (CM)}
+\begin{itemize}
+    \item \textbf{Propósito}: \emph{Fornecer subsídios para estabelecer e manter a integridade dos produtos de
+      trabalho, utilizando identificação de configuração, controle de configuração, balanço das atividades de configuração e auditorias de
+      configuração \cite{cmmi}}
+    \item \textbf{Práticas}:
+        \subitem \textit{SG 1 Estabelecer Baselines}
+	  \subsubitem SP 1.1 Identificar Itens de Configuração 
+	  \subsubitem SP 1.2 Estabelecer um Sistema de Gestão de Configuração 
+	  \subsubitem SP 1.3 Criar ou Liberar Baselines 
+	\subitem \textit{SG 2 Acompanhar e Controlar Mudanças}
+	  \subsubitem SP 2.1 Acompanhar Solicitações de Mudança 
+	  \subsubitem SP 2.2 Controlar Itens de Configuração 
+	 \subitem \textit{SG 3 Estabelecer Integridade }
+	  \subsubitem SP 3.1 Estabelecer Registros de Gestão de Configuração
+	  \subsubitem SP 3.2 Executar Auditorias de Configuração
+\end{itemize}
+		
+
+\noindent
+\textbf{Integração de Produto (PI)}
+\begin{itemize}
+    \item \textbf{Propósito}: \emph{Fornecer
+subsídios para montar o produto a partir de componentes de produto,
+assegurar que o produto integrado execute as funções de forma
+apropriada e entregar o produto. \cite{cmmi}}
+    \item \textbf{Práticas}:
+		\subitem \textit{SG 1 Preparar-se para Integração de Produto}
+
+			\subsubitem SP 1.1 Determinar Sequência de Integração
+			\subsubitem SP 1.2 Estabelecer Ambiente de Integração do Produto
+			\subsubitem SP 1.3 Estabelecer Procedimentos e Critérios para Integração do Produto
+		\subitem \textit{SG 2 Assegurar Compatibilidade das Interfaces}
+			\subsubitem SP 2.1 Revisar Descrições de Interfaces para Assegurar Completude
+			\subsubitem SP 2.2 Gerenciar Interfaces
+			\subsubitem SP 3.1 Confirmar se os Componentes do Produto estão Prontos para serem Integrados
+		\subitem \textit{SG 3 Montar Componentes do Produto e Entregar Produto}
+			\subsubitem SP 3.2 Montar Componentes do Produto
+			\subsubitem SP 3.3 Avaliar Componentes de Produto Montados
+			\subsubitem SP 3.4 Empacotar e Entregar Produto ou Componente de Produto
+\end{itemize}
+
 
 \vfill
 \pagebreak
@@ -114,7 +164,8 @@ alinhadas com a experiência da equipe de desenvolvimento no contexto.
 
 Para o objetivo de melhoria "\emph{Formalizar o processo de desenvolvimento de software}", no processo a ser modelado as
 seguintes atividades devem ser incluídas, baseando-se nas atividades dos processos de Garantia de Qualidade de Software,
-de Gestão de Configuração e de Teste de Qualificação de Software da norma ISO/IEC 12207/2008 \cite{12207}:
+de Gestão de Configuração e de Teste de Qualificação de Software da norma ISO/IEC 12207/2008 \cite{12207}. Algumas atividades
+foram relacionadas com as práticas selecionadas do CMMI-DEV. 
  
 \begin{itemize}
   \item Definir um subprocesso de garantia de qualidade;
@@ -123,6 +174,7 @@ de Gestão de Configuração e de Teste de Qualificação de Software da norma I
     \subitem - Adicionar atividades de Verificação e Validação para a garantia da qualidade.
   \item Definir e padronizar a estratégia de gerência de configuração;
     \subitem - Definir estratégia para o controle de mudanças;
+      \subsubitem CMMI: SP 2.1 Acompanhar Solicitações de Mudança e SP 2.2 Controlar Itens de Configuração 
   \item Estabelecer e manter suíte de testes;
     \subitem - Desenvolver critérios de aceitação para o software integrado, de acordo com os requisitos;
     \subitem - Montar suíte de testes;
@@ -135,7 +187,10 @@ O objetivo de melhoria "\emph{Otimizar a atividade de implantação}" consiste e
 para que o impacto da burocracia no acesso ao ambiente de produção seja mínimo no desenvolvimento do sistema.
 Para atingir este objetivo, é proposta a adição da técnica de integração contínua ao processo para automatizar a
 implantação e atualização do código. Esta proposta está alinhada com os princípios e práticas ágeis Rápido \textit{feedback},
-Testes e Integração Contínua, propostos por \citeonline{xp} na metodologia XP.
+Testes e Integração Contínua, propostos por \citeonline{xp} na metodologia XP. Além disso, as práticas do CMMI 
+\textit{SP 1.2 Estabelecer Ambiente de Integração do Produto} e 
+\textit{SP 1.3 Estabelecer Procedimentos e Critérios} para Integração do Produto da área de processo Integração 
+do Produto corroboram com a criação da integração contínua.
 
 O objetivo de melhoria "\emph{Estabelecer métricas para o processo}" seria basicamente um subprocesso 
 do processo que será obtido com o objetivo "\emph{Formalizar o processo de desenvolvimento de software}", 
@@ -162,7 +217,12 @@ da norma ISO/IEC 12207/2008.
 
 \section{Planejamento da avaliação}
     
-    Para avaliar o resultado do processo de melhoria, serão coletadas as seguintes métricas:
+    Para avaliar o resultado do processo de melhoria será executada uma avaliação de confronto com os elementos selecionados
+    da 12207, do CMMI-DEV e das práticas ágeis. A fim de comparar o processo melhorado com o processo atual a mesma avaliação 
+    de confronto foi realizada no processo atual e pode ser vista no Apêndice \ref{ap:avaliacao}. As mesmas tabelas serão 
+    utilizadas para avaliação do processo melhorado.
+    
+    Além disso, serão coletadas as seguintes métricas:
     
     \begin{itemize}
       \item Número de desvios ao processo;
